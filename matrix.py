@@ -12,7 +12,7 @@ import math
 #print the matrix such that it looks like
 #the template in the top comment
 def print_matrix( matrix ):
-    for c in range (4):
+    for c in range (getsizeof(matrix)):
         print("\n")
         for r in range (getsizeof(matrix[c])):
             print(matrix[c][r] + " ")
@@ -20,7 +20,10 @@ def print_matrix( matrix ):
 #turn the paramter matrix into an identity matrix
 #you may assume matrix is square
 def ident( matrix ):
-    pass
+    for c in range (getsizeof(matrix))
+        for r in range (getsizeof(matrix[c]))
+            if (c != r)
+                matrix[c][r] = 0
 
 #multiply m1 by m2, modifying m2 to be the product
 #m1 * m2 -> m2
