@@ -12,7 +12,10 @@ import math
 #print the matrix such that it looks like
 #the template in the top comment
 def print_matrix( matrix ):
-    pass
+    for c in range (4):
+        print("\n")
+        for r in range (getsizeof(matrix[c])):
+            print(matrix[c][r] + " ")
 
 #turn the paramter matrix into an identity matrix
 #you may assume matrix is square
