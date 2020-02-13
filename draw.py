@@ -9,8 +9,9 @@ def add_edge( matrix, x0, y0, z0, x1, y1, z1 ):
     pass
 
 def add_point( matrix, x, y, z=0 ):
-    pass
-
+    matrix[][0] = x
+    matrix[][1] = y
+    matrix[][2] = z
 
 
 
