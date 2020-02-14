@@ -9,10 +9,12 @@ def add_edge( matrix, x0, y0, z0, x1, y1, z1 ):
     pass
 
 def add_point( matrix, x, y, z=0 ):
-    matrix[][0] = x
-    matrix[][1] = y
-    matrix[][2] = z
-
+    matrix.append( [] )
+    matrix[len(matrix)-1].append(x)
+    matrix[len(matrix)-1].append(y)
+    matrix[len(matrix)-1].append(z)
+    matrix[len(matrix)-1].append(1)
+    pass
 
 
 def draw_line( x0, y0, x1, y1, screen, color ):

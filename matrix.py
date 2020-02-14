@@ -12,17 +12,18 @@ import math
 #print the matrix such that it looks like
 #the template in the top comment
 def print_matrix( matrix ):
-    for c in range (getsizeof(matrix)):
-        print("\n")
-        for r in range (getsizeof(matrix[c])):
-            print(matrix[c][r] + " ")
-
+    print("\n")
+    for c in range (len(matrix)):
+        string = ""
+        for r in range (len(matrix[c])):
+            string += str(matrix[c][r]) + " "
+        print(string)
 #turn the paramter matrix into an identity matrix
 #you may assume matrix is square
 def ident( matrix ):
-    for c in range (getsizeof(matrix))
-        for r in range (getsizeof(matrix[c]))
-            if (c != r)
+    for c in range (len(matrix)):
+        for r in range (len(matrix[c])):
+            if (c != r):
                 matrix[c][r] = 0
 
 #multiply m1 by m2, modifying m2 to be the product
