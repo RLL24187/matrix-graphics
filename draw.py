@@ -6,15 +6,15 @@ def draw_lines( matrix, screen, color ):
     pass
 
 def add_edge( matrix, x0, y0, z0, x1, y1, z1 ):
-    pass
+    add_edge(matrix, x0, y0, z0)
+    add_edge(matrix, x1, y1, z1)
 
 def add_point( matrix, x, y, z=0 ):
-    matrix.append( [] )
-    matrix[len(matrix)-1].append(x)
-    matrix[len(matrix)-1].append(y)
-    matrix[len(matrix)-1].append(z)
-    matrix[len(matrix)-1].append(1)
-    pass
+    matrix.append( [x, y, z, 1] )
+    # matrix[len(matrix)-1].append(x)
+    # matrix[len(matrix)-1].append(y)
+    # matrix[len(matrix)-1].append(z)
+    # matrix[len(matrix)-1].append(1)
 
 
 def draw_line( x0, y0, x1, y1, screen, color ):
