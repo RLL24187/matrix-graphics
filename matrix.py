@@ -13,13 +13,13 @@ import math
 #the template in the top comment
 def print_matrix( matrix ):
     string = ""
-    for c in range (4):
-        for r in range (len(matrix)):
-            string += str(matrix[r][c]) + " "
+    for r in range (len(matrix[0])):
+        for c in matrix:
+            string += str(c[r]) + " "
         string += "\n"
     print(string)
 
-    
+
 #turn the paramter matrix into an identity matrix
 #you may assume matrix is square
 def ident( matrix ):
@@ -27,6 +27,8 @@ def ident( matrix ):
         for r in range (len(matrix[c])):
             if (c != r):
                 matrix[c][r] = 0
+            else:
+                matrix[c][r] = 1
 
 #multiply m1 by m2, modifying m2 to be the product
 #m1 * m2 -> m2
