@@ -26,9 +26,9 @@ def ident( matrix ):
     for c in range (len(matrix)):
         for r in range (len(matrix[c])):
             if (c != r):
-                matrix[c][r] = 0
+                matrix[c][r] = float(0)
             else:
-                matrix[c][r] = 1
+                matrix[c][r] = float(1)
 
 #multiply m1 by m2, modifying m2 to be the product
 #m1 * m2 -> m2
@@ -60,5 +60,5 @@ def new_matrix(rows = 4, cols = 4):
     for c in range( cols ):
         m.append( [] )
         for r in range( rows ):
-            m[c].append( 0 )
+            m[c].append( float(0) )
     return m
