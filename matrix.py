@@ -12,12 +12,14 @@ import math
 #print the matrix such that it looks like
 #the template in the top comment
 def print_matrix( matrix ):
-    print("\n")
-    for c in range (len(matrix)):
-        string = ""
-        for r in range (len(matrix[c])):
-            string += str(matrix[c][r]) + " "
-        print(string)
+    string = ""
+    for c in range (4):
+        for r in range (len(matrix)):
+            string += str(matrix[r][c]) + " "
+        string += "\n"
+    print(string)
+
+    
 #turn the paramter matrix into an identity matrix
 #you may assume matrix is square
 def ident( matrix ):
