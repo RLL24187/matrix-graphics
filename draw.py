@@ -6,14 +6,14 @@ def draw_lines( matrix, screen, color ):
     for i in range (int(len(matrix) / 2)):
         p0 = matrix[2 * i]
         p1 = matrix[2 * i + 1]
-        draw_line(p0[0], p0[1], p1[0], p1[1], screen, color)
+        draw_line(int(p0[0]), int(p0[1]), int(p1[0]), int(p1[1]), screen, color)
 
 def add_edge( matrix, x0, y0, z0, x1, y1, z1 ):
-    add_edge(matrix, x0, y0, z0)
-    add_edge(matrix, x1, y1, z1)
+    add_point(matrix, x0, y0, z0)
+    add_point(matrix, x1, y1, z1)
 
 def add_point( matrix, x, y, z=0 ):
-    matrix.append( [x, y, z, 1] )
+    matrix.append( [ x,  y,  z,  1] )
     # matrix[len(matrix)-1].append(x)
     # matrix[len(matrix)-1].append(y)
     # matrix[len(matrix)-1].append(z)
