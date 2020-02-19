@@ -42,6 +42,31 @@ print_matrix(m2)
 # print_matrix(m0)
 #
 
+dragon = new_matrix(0, 0)
+
+# head
+add_edge(dragon, 5, 25, 0, 7, 28, 0)
+add_edge(dragon, 6, 26, 0, 5, 25, 0)
+add_edge(dragon, 5, 25, 0, 7, 25, 0)
+add_edge(dragon, 6, 26, 0, 5, 25, 0)
+add_edge(dragon, 8, 28, 0, 6, 26, 0)
+add_edge(dragon, 8, 28, 0, 9, 29, 0)
+add_edge(dragon, 8, 28, 0, 10, 27, 0)
+add_edge(dragon, 10, 27, 0, 11, 29, 0)
+add_edge(dragon, 11, 29, 0, 9, 29, 0)
+add_edge(dragon, 9, 29, 0, 7, 28, 0)
+add_edge(dragon, 7, 28, 0, 6, 28, 0)
+add_edge(dragon, 6, 28, 0, 7, 29, 0)
+add_edge(dragon, 7, 29, 0, 4, 27, 0)
+add_edge(dragon, 5, 28, 0, 4, 27, 0)
+add_edge(dragon, 4, 27, 0, 3, 25, 0)
+add_edge(dragon, 3, 25, 0, 0, 23, 0)
+add_edge(dragon, 0, 23, 0, 1, 21, 0)
+add_edge(dragon, 1, 21, 0, 22, 5, 0)
+add_edge(dragon, 22, 5, 0, 8, 23, 0)
+
+# nostril
+add_edge(dragon, 1, 23, 0, 1, 22, 0)
 
 draw_lines( matrix, screen, color )
 display(screen)
