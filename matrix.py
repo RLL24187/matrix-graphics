@@ -33,9 +33,26 @@ def ident( matrix ):
 #multiply m1 by m2, modifying m2 to be the product
 #m1 * m2 -> m2
 def matrix_mult( m1, m2 ):
-    pass
+    # number of cols in m1 = number of rows in m2
+    # print(len(m1))
+    # print(len(m2[0]))
+    if (len(m1) != len(m2[0])):
+        return
+    # product matrix will have dimensions (rows m1) x (cols m2)
+    for r in range (len(m2)):
+        m2[r] = mult_help(m1, m2[r])
 
 
+def mult_help(m1, col):
+    # multiply elements of rows in m1 by elements of each col in m2 and total them
+    temp = []
+    for i in range (len(m1)):
+        total = 0
+        for r in range (len(m1[i])):
+            # print(str(m1[r][i]) + " * " + str(col[r]))
+            total += m1[r][i] * col[r]
+        temp.append(total)
+    return temp # returns the new row
 
 
 def new_matrix(rows = 4, cols = 4):
