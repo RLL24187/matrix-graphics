@@ -120,12 +120,14 @@ def add_claws(matrix, x0, y0, z0 = 0):
     add_edge(matrix, x0, y0 + 2, z0, x0 + 1, y0 + 2, z0)
 
     # middle toe
-    add_edge(matrix, x0, y0 + 1, z0, x0 + 1, y0 + 2, z0)
-    add_edge(matrix, x0, y0 + 1, z0, x0 + 1, y0 + 1, z0)
+    add_edge(matrix, x0 - 1, y0 + 1, z0, x0, y0 + 2, z0)
+    add_edge(matrix, x0 - 1, y0 + 1, z0, x0, y0 + 1, z0)
 
     # finishing bottom, top, and middle toes
-    add_edge(matrix, x0 + 1, y0, z0, x0 + 1, y0 + 3, z0)
-    
+    add_edge(matrix, x0 + 1, y0, z0, x0 + 1, y0 + 1, z0)
+    add_edge(matrix, x0, y0 + 1, z0, x0, y0 + 2, z0)
+    add_edge(matrix, x0 + 1, y0 + 2, z0, x0 + 1, y0 + 3, z0)
+
 def add_feet(matrix, x0, y0, z0 = 0):
     # draws a dragon foot given starting point (bottom-right most)
     # bottom toe
@@ -135,6 +137,6 @@ def add_feet(matrix, x0, y0, z0 = 0):
     add_edge(matrix, x0 + 3, y0 + 1, z0, x0 + 4, y0 + 1, z0)
     # top toe
     add_edge(matrix, x0, y0 + 3, z0, x0 + 2, y0 + 2, z0)
-    add_edge(matrix, x0, y0 + 2, z0, x0 + 2, y0 + 2, z0)
+    add_edge(matrix, x0 - 1, y0 + 2, z0, x0 + 2, y0 + 2, z0)
     # middle toe
-    add_edge(matrix, x0, y0 + 1, z0, x0 + 2, y0 + 1, z0)
+    add_edge(matrix, x0 - 1, y0 + 1, z0, x0 + 2, y0 + 1, z0)

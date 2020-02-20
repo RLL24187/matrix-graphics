@@ -237,32 +237,47 @@ add_edge(spikes, 15, 20, 0, 16, 19, 0)
 add_edge(spikes, 16, 19, 0, 16, 17, 0)
 add_edge(spikes, 16, 17, 0, 14, 16, 0)
 
+# wings
+add_edge(body, 14, 16, 0, 18, 17, 0)
+add_edge(body, 18, 17, 0, 21, 18, 0)
+add_edge(body, 21, 18, 0, 20, 20, 0)
+add_edge(body, 20, 20, 0, 17, 23, 0)
+add_edge(body, 17, 23, 0, 21, 22, 0)
+add_edge(body, 21, 22, 0, 24, 21, 0)
+add_edge(body, 24, 21, 0, 26, 19, 0)
+add_edge(body, 26, 19, 0, 25, 21, 0)
+add_edge(body, 25, 21, 0, 23, 22, 0)
+add_edge(body, 23, 22, 0, 20, 23, 0)
+add_edge(body, 20, 23, 0, 16, 24, 0)
+add_edge(body, 16, 24, 0, 15, 30, 0)
+add_edge(body, 15, 30, 0, 19, 28, 0)
 
 # feet
 add_feet(body, 4, 2)
 add_feet(body, 9, 0)
     # third foot
-add_edge(body, 22, 4, 0, 24, 4, 0)
+add_edge(body, 21, 4, 0, 24, 4, 0)
 add_edge(body, 22, 3, 0, 24, 3, 0)
 add_edge(body, 24, 3, 0, 25, 4, 0)
 add_edge(body, 25, 4, 0, 26, 4, 0)
 add_feet(body, 31, 0)
 
 # claws
-# third foot's claws
-add_edge(claws, 21, 4, 0, 22, 5, 0)
-add_edge(claws, 21, 4, 0, 22, 4, 0)
-add_edge(claws, 22, 3, 0, 22, 5, 0)
+    # first foot
+add_claws(claws, 3, 2)
+    # second foot
+add_claws(claws, 8, 0)
+    # third foot
+add_edge(claws, 20, 4, 0, 21, 5, 0)
+add_edge(claws, 20, 4, 0, 21, 4, 0)
+add_edge(claws, 21, 4, 0, 21, 5, 0)
+add_edge(claws, 22, 3, 0, 22, 4, 0)
 add_edge(claws, 21, 3, 0, 22, 3, 0)
 add_edge(claws, 21, 3, 0, 22, 4, 0)
 add_edge(claws, 27, 4, 0, 26, 5, 0)
 add_edge(claws, 26, 5, 0, 26, 4, 0)
 add_edge(claws, 26, 4, 0, 27, 4, 0)
-# first foot
-add_claws(claws, 3, 2)
-# second foot
-add_claws(claws, 8, 0)
-# last foot
+    # last foot
 add_claws(claws, 30, 0)
 
 i = 0
