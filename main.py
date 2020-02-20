@@ -50,7 +50,8 @@ eye = new_matrix(0, 0)
 belly = new_matrix(0, 0)
 spikes = new_matrix(0, 0)
 claws = new_matrix(0, 0)
-dragon = [feathers, body, horns, eye, belly, spikes, claws]
+wings = new_matrix(0, 0)
+dragon = [feathers, body, eye, belly, horns, spikes, claws, wings]
 
 # head (outline)
 add_edge(body, 5, 23, 0, 6, 24, 0)
@@ -151,7 +152,7 @@ add_edge(horns, 6, 28, 0, 7, 29, 0)
 add_edge(horns, 5, 28, 0, 7, 29, 0)
 add_edge(horns, 5, 28, 0, 4, 27, 0)
 add_edge(horns, 5, 25, 0, 7, 28, 0)
-add_edge(horns, 8, 28, 0, 6, 26, 0)
+add_edge(horns, 8, 28, 0, 5, 25, 0)
 
 # front feathery thingies
 add_edge(feathers, 15, 10, 0, 16, 9, 0)
@@ -195,7 +196,7 @@ add_edge(feathers, 40, 32, 0, 40, 33, 0)
 add_edge(feathers, 40, 33, 0, 37, 29, 0)
 
 # eye
-add_edge(eye, 6, 26, 0, 5, 25, 0)
+# add_edge(eye, 6, 26, 0, 5, 25, 0)
 add_edge(eye, 7, 25, 0, 8, 28, 0)
 add_edge(eye, 5, 25, 0, 7, 25, 0)
 add_edge(eye, 6, 26, 0, 5, 25, 0)
@@ -203,6 +204,7 @@ add_edge(eye, 6, 26, 0, 5, 25, 0)
 # belly
 add_edge(belly, 10, 20, 0, 9, 14, 0)
 add_edge(belly, 9, 14, 0, 11, 10, 0)
+add_edge(belly, 14.85, 9.2, 0, 16, 9, 0)
 add_edge(belly, 16, 9, 0, 21, 8, 0)
 add_edge(belly, 21, 8, 0, 24, 8, 0)
 add_edge(belly, 24, 8, 0, 27, 9, 0)
@@ -219,6 +221,11 @@ add_edge(belly, 23, 14, 0, 24, 15, 0)
 add_edge(horns, 18, 15, 0, 19, 16, 0)
 add_edge(horns, 19, 16, 0, 23, 16, 0)
 add_edge(horns, 23, 16, 0, 24, 15, 0)
+# add_edge(horns, 19, 16, 0, 20, 15, 0)
+# add_edge(horns, 19, 14, 0, 20, 15, 0)
+# add_edge(horns, 20, 15, 0, 22, 15, 0)
+# add_edge(horns, 22, 15, 0, 23, 16, 0)
+# add_edge(horns, 22, 15, 0, 23, 14, 0)
 
 # spikes
 add_edge(spikes, 9, 29, 0, 6, 28, 0)
@@ -238,19 +245,100 @@ add_edge(spikes, 16, 19, 0, 16, 17, 0)
 add_edge(spikes, 16, 17, 0, 14, 16, 0)
 
 # wings
+    # front wing
+    # b/w base and first "arm"
 add_edge(body, 14, 16, 0, 18, 17, 0)
+add_edge(body, 14, 16, 0, 20, 18, 0)
+add_edge(body, 20, 18, 0, 19, 20, 0)
+add_edge(body, 19, 20, 0, 15, 24, 0)
 add_edge(body, 18, 17, 0, 21, 18, 0)
 add_edge(body, 21, 18, 0, 20, 20, 0)
 add_edge(body, 20, 20, 0, 17, 23, 0)
-add_edge(body, 17, 23, 0, 21, 22, 0)
-add_edge(body, 21, 22, 0, 24, 21, 0)
-add_edge(body, 24, 21, 0, 26, 19, 0)
+    # first "arm"
+add_edge(wings, 17, 23, 0, 21, 22, 0)
+add_edge(wings, 21, 22, 0, 24, 21, 0)
+add_edge(wings, 24, 21, 0, 26, 19, 0)
 add_edge(body, 26, 19, 0, 25, 21, 0)
 add_edge(body, 25, 21, 0, 23, 22, 0)
 add_edge(body, 23, 22, 0, 20, 23, 0)
 add_edge(body, 20, 23, 0, 16, 24, 0)
-add_edge(body, 16, 24, 0, 15, 30, 0)
-add_edge(body, 15, 30, 0, 19, 28, 0)
+        # b/w first and second "arm"
+add_edge(body, 16, 24, 0, 15, 27, 0)
+        # second "arm"
+add_edge(wings, 15, 27, 0, 17, 27, 0)
+add_edge(wings, 17, 27, 0, 23, 25, 0)
+add_edge(wings, 23, 25, 0, 25, 24, 0)
+add_edge(wings, 25, 24, 0, 29, 20, 0)
+add_edge(body, 29, 20, 0, 27, 23, 0)
+add_edge(body, 27, 23, 0, 25, 25, 0)
+add_edge(body, 25, 25, 0, 23, 26, 0)
+add_edge(body, 23, 26, 0, 17, 28, 0)
+add_edge(body, 17, 28, 0, 15, 28, 0)
+        # b/w second and third "arm"
+add_edge(body, 15, 28, 0, 15, 30, 0)
+        # third "arm"
+add_edge(wings, 15, 30, 0, 19, 28, 0)
+add_edge(wings, 19, 28, 0, 28, 25, 0)
+add_edge(wings, 28, 25, 0, 29, 24, 0)
+add_edge(wings, 29, 24, 0, 32, 20, 0)
+add_edge(body, 32, 20, 0, 30, 24, 0)
+add_edge(body, 30, 24, 0, 29, 25, 0)
+add_edge(body, 29, 25, 0, 27, 26, 0)
+add_edge(body, 27, 26, 0, 18, 29, 0)
+add_edge(body, 18, 29, 0, 15, 31, 0)
+        # fourth arm
+add_edge(wings, 15, 31, 0, 16, 31, 0)
+add_edge(wings, 16, 31, 0, 24, 29, 0)
+add_edge(wings, 24, 29, 0, 30, 26, 0)
+add_edge(wings, 30, 26, 0, 34, 23, 0)
+add_edge(wings, 34, 23, 0, 37, 18, 0)
+        # also outline of back wing top "arm"
+add_edge(body, 37, 18, 0, 34, 24, 0)
+add_edge(body, 34, 24, 0, 30, 27, 0)
+add_edge(body, 30, 27, 0, 24, 30, 0)
+add_edge(body, 24, 30, 0, 16, 32, 0)
+        # finishing fourth arm
+add_edge(body, 16, 32, 0, 14, 31, 0)
+add_edge(body, 14, 31, 0, 14, 27, 0)
+add_edge(body, 14, 27, 0, 15, 24, 0)
+        # back wing
+add_edge(wings, 36, 22, 0, 34, 24, 0)
+add_edge(body, 36, 22, 0, 35, 24, 0)
+add_edge(body, 35, 24, 0, 33, 26, 0)
+add_edge(body, 33, 26, 0, 29, 28, 0)
+add_edge(body, 29, 28, 0, 23, 31, 0)
+        # top "arm"
+add_edge(body, 23, 31, 0, 14, 33, 0)
+add_edge(body, 14, 33, 0, 12, 32, 0)
+add_edge(body, 12, 32, 0, 12, 28, 0)
+add_edge(body, 12, 28, 0, 18, 20, 0)
+add_edge(body, 18, 20, 0, 19, 18, 0)
+add_edge(body, 19, 18, 0, 14, 16, 0)
+add_edge(wings, 16, 32, 0, 13, 32, 0)
+        # end of top "arm" and beginning of third "arm"
+add_edge(body, 13, 32, 0, 14, 31, 0)
+add_edge(wings, 13, 31, 0, 14, 30, 0)
+        # b/w second and third "arm"
+add_edge(body, 13, 31, 0, 13, 29, 0)
+        # second "arm"
+add_edge(body, 13, 29, 0, 14, 29, 0)
+add_edge(wings, 13, 28, 0, 14, 28, 0)
+add_edge(body, 13, 28, 0, 14, 27, 0)
+
+# white part of the wings (sails?)
+    # front wing
+add_edge(wings, 14, 16, 0, 18, 16, 0)
+add_edge(wings, 18, 16, 0, 24, 17, 0)
+add_edge(wings, 24, 17, 0, 21, 18, 0)
+add_edge(wings, 24, 17, 0, 29, 16, 0)
+add_edge(wings, 29, 16, 0, 26, 19, 0)
+add_edge(wings, 26, 19, 0, 30, 17, 0)
+add_edge(wings, 30, 17, 0, 29, 20, 0)
+add_edge(wings, 29, 20, 0, 33, 17, 0)
+add_edge(wings, 33, 17, 0, 32, 20, 0)
+add_edge(wings, 32, 20, 0, 37, 18, 0)
+    # back wing
+add_edge(wings, 36, 22, 0, 34.5, 23, 0)
 
 # feet
 add_feet(body, 4, 2)
@@ -282,8 +370,9 @@ add_claws(claws, 30, 0)
 
 i = 0
 for body_part in dragon:
+    shift_updown(body_part, 6)
     scalar_mult(body_part, 11)
-    if (i == 0 or i == 2):
+    if (i == 0 or i == 4):
         color = [255, 0, 0]
     elif (i == 1):
         color = [0, 255, 0]
