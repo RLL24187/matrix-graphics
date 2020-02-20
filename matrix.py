@@ -34,7 +34,12 @@ def scalar_mult (matrix, scalar):
     for c in range (len(matrix)):
         for r in range (len(matrix[c])):
             matrix[c][r] *= scalar
-            
+def shift_updown (matrix, shift_amt):
+    for c in range(len(matrix)):
+        matrix[c][1] += shift_amt
+def shift_rightleft (matrix, shift_amt):
+    for c in range(len(matrix)):
+        matrix[c][0] += shift_amt
 #multiply m1 by m2, modifying m2 to be the product
 #m1 * m2 -> m2
 def matrix_mult( m1, m2 ):
