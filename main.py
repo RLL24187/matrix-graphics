@@ -70,7 +70,8 @@ add_edge(body, 8, 23, 0, 8, 24, 0)
 add_edge(body, 1, 21, 0, 5, 23, 0)
 
 # nostril
-add_edge(body, 1, 23, 0, 1, 22, 0)
+add_edge(body, 1, 23, 0, 1.3, 23.4, 0)
+add_edge(body, 1, 23, 0, 1.25, 22.75, 0)
 
 # neck
 add_edge(body, 8, 23, 0, 9, 22, 0)
