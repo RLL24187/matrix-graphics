@@ -30,6 +30,11 @@ def ident( matrix ):
             else:
                 matrix[c][r] = float(1)
 
+def scalar_mult (matrix, scalar):
+    for c in range (len(matrix)):
+        for r in range (len(matrix[c])):
+            matrix[c][r] *= scalar
+            
 #multiply m1 by m2, modifying m2 to be the product
 #m1 * m2 -> m2
 def matrix_mult( m1, m2 ):
