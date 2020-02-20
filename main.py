@@ -45,11 +45,12 @@ print_matrix(m2)
 
 body = new_matrix(0, 0)
 horns = new_matrix(0, 0)
+feathers = new_matrix(0, 0)
 eye = new_matrix(0, 0)
 belly = new_matrix(0, 0)
 spikes = new_matrix(0, 0)
 claws = new_matrix(0, 0)
-dragon = [body, horns, eye, belly, spikes, claws]
+dragon = [feathers, body, horns, eye, belly, spikes, claws]
 
 # head (outline)
 add_edge(body, 5, 23, 0, 6, 24, 0)
@@ -143,7 +144,7 @@ add_edge(body, 34, 6, 0, 33, 7, 0)
 add_edge(body, 33, 7, 0, 33, 10, 0)
 add_edge(body, 33, 10, 0, 32, 12, 0)
 
-# horns (and weird feathery thingies)
+# horns
 add_edge(horns, 8, 28, 0, 9, 29, 0)
 add_edge(horns, 9, 29, 0, 7, 28, 0)
 add_edge(horns, 6, 28, 0, 7, 29, 0)
@@ -153,22 +154,45 @@ add_edge(horns, 5, 25, 0, 7, 28, 0)
 add_edge(horns, 8, 28, 0, 6, 26, 0)
 
 # front feathery thingies
-add_edge(horns, 15, 10, 0, 16, 9, 0)
-add_edge(horns, 16, 10, 0, 16, 9, 0)
-add_edge(horns, 16, 10, 0, 18, 11, 0)
-add_edge(horns, 16, 11, 0, 18, 11, 0)
-add_edge(horns, 16, 11, 0, 18, 13, 0)
-add_edge(horns, 18, 13, 0, 15, 12, 0)
+add_edge(feathers, 15, 10, 0, 16, 9, 0)
+add_edge(feathers, 16, 10, 0, 16, 9, 0)
+add_edge(feathers, 16, 10, 0, 18, 11, 0)
+add_edge(feathers, 16, 11, 0, 18, 11, 0)
+add_edge(feathers, 16, 11, 0, 18, 13, 0)
+add_edge(feathers, 18, 13, 0, 15, 12, 0)
 
 # back feathery thingies
-add_edge(horns, 33, 10, 0, 34, 9, 0)
-add_edge(horns, 34, 9, 0, 34, 10, 0)
-add_edge(horns, 34, 10, 0, 35, 10, 0)
-add_edge(horns, 35, 10, 0, 34, 11, 0)
-add_edge(horns, 34, 11, 0, 36, 12, 0)
-add_edge(horns, 33, 12, 0, 36, 12, 0)
-add_edge(horns, 33, 12, 0, 34, 13, 0)
-add_edge(horns, 32, 12, 0, 34, 13, 0)
+add_edge(feathers, 33, 10, 0, 34, 9, 0)
+add_edge(feathers, 34, 9, 0, 34, 10, 0)
+add_edge(feathers, 34, 10, 0, 35, 10, 0)
+add_edge(feathers, 35, 10, 0, 34, 11, 0)
+add_edge(feathers, 34, 11, 0, 36, 12, 0)
+add_edge(feathers, 33, 12, 0, 36, 12, 0)
+add_edge(feathers, 33, 12, 0, 34, 13, 0)
+add_edge(feathers, 32, 12, 0, 34, 13, 0)
+
+# tail feathery thingies
+add_edge(feathers, 38, 28, 0, 42, 27, 0)
+add_edge(feathers, 42, 27, 0, 41, 28, 0)
+add_edge(feathers, 41, 28, 0, 39, 29, 0)
+add_edge(feathers, 41, 28, 0, 43, 28, 0)
+add_edge(feathers, 43, 28, 0, 41, 29, 0)
+add_edge(feathers, 41, 29, 0, 39, 29, 0)
+add_edge(feathers, 41, 29, 0, 45, 28, 0)
+add_edge(feathers, 45, 28, 0, 43, 30, 0)
+add_edge(feathers, 45, 28, 0, 44, 29, 0)
+# add_edge(horns, 44, 29, 0, 45, 30, 0)
+# add_edge(horns, 45, 30, 0, 43, 30, 0)
+# add_edge(horns, 45, 30, 0, 44, 31, 0)
+add_edge(feathers, 44, 31, 0, 45, 32, 0)
+add_edge(feathers, 45, 32, 0, 43, 30, 0)
+add_edge(feathers, 45, 32, 0, 41, 31, 0)
+add_edge(feathers, 41, 31, 0, 39, 30, 0)
+add_edge(feathers, 41, 31, 0, 43, 33, 0)
+add_edge(feathers, 43, 33, 0, 40, 32, 0)
+add_edge(feathers, 40, 32, 0, 39, 30, 0)
+add_edge(feathers, 40, 32, 0, 40, 33, 0)
+add_edge(feathers, 40, 33, 0, 37, 29, 0)
 
 # eye
 add_edge(eye, 6, 26, 0, 5, 25, 0)
@@ -244,10 +268,10 @@ add_claws(claws, 30, 0)
 i = 0
 for body_part in dragon:
     scalar_mult(body_part, 11)
-    if i < 1:
-        color = [0, 255, 0]
-    elif (i < 2):
+    if (i == 0 or i == 2):
         color = [255, 0, 0]
+    elif (i == 1):
+        color = [0, 255, 0]
     else:
         color = [255, 255, 255]
     i += 1
